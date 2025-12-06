@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Create a customer form Agent</description>
+    <environments>Default</environments>
+    <interviewLabel>Create customer {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create a customer</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creating Customer&apos;s Record From Agent</description>
+        <name>Create_Customer_Record</name>
+        <label>Create Customer Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignRecordIdToReference>CustomeId</assignRecordIdToReference>
+        <connector>
+            <targetReference>Getting_Customer_s_Record</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Check_In_Date__c</field>
+            <value>
+                <elementReference>CheckinnDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Mobile_Phone__c</field>
+            <value>
+                <elementReference>Phonenumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Room_Preferance__c</field>
+            <value>
+                <elementReference>Roompreference</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Ready to Check In</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Customer__c</object>
+    </recordCreates>
+    <recordLookups>
+        <description>Getting Customer&apos;s Record created by Agent</description>
+        <name>Getting_Customer_s_Record</name>
+        <label>Getting Customer&apos;s Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CustomeId</elementReference>
+            </value>
+        </filters>
+        <object>Customer__c</object>
+        <outputAssignments>
+            <assignToReference>CustomersUniqueID</assignToReference>
+            <field>Customer_ID__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Customer_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Customer&apos;s Check-inn Date</description>
+        <name>CheckinnDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customers record ID</description>
+        <name>CustomeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer Unique ID</description>
+        <name>CustomersUniqueID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Name of Customer</description>
+        <name>Name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customers Phone Number</description>
+        <name>Phonenumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>customers room preference</description>
+        <name>Roompreference</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Queue For Room Service</description>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Room Service Queue</name>
+    <queueMembers>
+        <users>
+            <user>epic.22c8d5791f62@orgfarm.salesforce.com</user>
+            <user>insightssecurity@00dgk00000f29y1uaj.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>
