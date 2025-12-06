@@ -27,13 +27,10 @@ LuxeHotel is a modern hotel management solution that helps hotel staff manage re
   - Loyalty program integration
 
 
-## Getting Started
 
 
-### Installation
 
-1. Clone the repository:
-https://github.com/Ameyzone/Agentforce_Roomie
+
 
 
 
