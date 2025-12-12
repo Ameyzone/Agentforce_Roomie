@@ -27,22 +27,10 @@ LuxeHotel is a modern hotel management solution that helps hotel staff manage re
   - Loyalty program integration
 
 
-## Getting Started
 
 
-### Installation
 
-1. Clone the repository:
-```bash
-https://github.com/Salesforce-Developer9/Roomie-Agent.git
-```
 
-## Contributing
 
-We welcome contributions to LuxeHotel! Please read our contributing guidelines before submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 
