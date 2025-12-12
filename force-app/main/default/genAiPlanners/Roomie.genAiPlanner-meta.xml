@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <attributeMappings>
+        <attributeName>Room_Check_Out_16jgK000000sNXV.Total_food_Cost_to_Pay_179gK000000evXR.output_TotalAmount</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>Total_Amount</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
     <description>Deliver personalized customer interactions with an autonomous AI agent. Roomie help customers in their hotel booking journey</description>
     <masterLabel>Roomie</masterLabel>
     <plannerType>AiCopilot__ReAct</plannerType>

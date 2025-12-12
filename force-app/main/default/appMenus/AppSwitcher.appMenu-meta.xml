@@ -132,4 +132,8 @@
         <name>ESW_Roomie_1763993071650</name>
         <type>Network</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Clinical_Research</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

@@ -111,6 +111,14 @@ I’m here 24/7 to make your experience truly extraordinary.
     </conversationVariables>
     <conversationVariables>
         <dataType>Text</dataType>
+        <description>Total Amount of Bill</description>
+        <developerName>Total_Amount</developerName>
+        <includeInPrompt>true</includeInPrompt>
+        <label>Total Amount</label>
+        <visibility>External</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
         <description>This variable may also be referred to as VerifiedCustomerId</description>
         <developerName>VerifiedCustomerId</developerName>
         <includeInPrompt>false</includeInPrompt>
